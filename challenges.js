@@ -76,4 +76,28 @@ module.exports = class Challenges {
     console.log(`fiveDiceScore`, scr);
     return scr;
   }
+
+  static oddOrEvenOneOut(numbers) {
+    let odd = 0;
+    let even = 0;
+
+    const splits = numbers.split(" ");
+    splits.map((el) => {
+      if (el % 2 === 0) {
+        even++;
+      } else {
+        odd++;
+      }
+    });
+    let index;
+    if (odd === 1) {
+      index = splits.findIndex((el) => el % 2 === 1) + 1;
+      console.log(`Odd one out at index ${index}`);
+      return index;
+    } else {
+      index = splits.findIndex((el) => el % 2 === 0) + 1;
+      console.log(`Even one out at index ${index}`);
+      return index;
+    }
+  }
 };
