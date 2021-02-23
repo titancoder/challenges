@@ -100,4 +100,17 @@ module.exports = class Challenges {
       return index;
     }
   }
+
+  static breakIntoPairs(str) {
+    let stringToOperate;
+    str.length % 2 == 0
+      ? (stringToOperate = str)
+      : (stringToOperate = str + "_");
+    let arr = [];
+    for (let i = 0; i <= stringToOperate.length - 2; i = i + 2) {
+      arr.push(stringToOperate.substr(i, 2));
+    }
+    console.log(`Break into Pairs : ${arr}`);
+    return arr;
+  }
 };
