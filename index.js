@@ -4,3 +4,4 @@ const Challenges = require("./challenges");
 //Challenges.fiveDiceScore([3, 3, 3, 3, 3]);
 //Challenges.oddOrEvenOneOut("1 3 5 0 5");
 // Challenges.breakIntoPairs("hellopp");
+// Challenges.weirdCase("Hello World");

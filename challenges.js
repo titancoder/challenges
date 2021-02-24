@@ -113,4 +113,18 @@ module.exports = class Challenges {
     console.log(`Break into Pairs : ${arr}`);
     return arr;
   }
+
+  static weirdCase(string) {
+    const arr = string.split("");
+    let count = 0;
+    arr.forEach((el, i) => {
+      el == " "
+        ? (count = 0)
+        : count % 2 == 0
+        ? (arr[i] = el.toUpperCase()) && count++
+        : (arr[i] = el.toLowerCase()) && count++;
+    });
+    console.log(`Weird case : ${arr.join("")}`);
+    return arr.join("");
+  }
 };
